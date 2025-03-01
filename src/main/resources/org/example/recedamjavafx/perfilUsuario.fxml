@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #fffdc9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.recedamjavafx.controllers.PerfilUsuarioController">
+
+    <top>
+        <!-- Título o encabezado -->
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-color: #002b51; -fx-border-color: #FFFFFF; -fx-border-image-width: 2;" text="Modifica tu Perfil de Usuario" textFill="WHITE" />
+    </top>
+
+    <center>
+        <VBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 20;">
+            <Label text="Nombre y Apellidos :">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <!-- Campo para el nombre del usuario (solo lectura) -->
+            <TextField fx:id="nombreUsuarioField" promptText="Nombre" style="-fx-font-size: 16px;" />
+            <Label layoutX="30.0" layoutY="30.0" text="Correo Electrónico :">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+
+            <!-- Campo para el correo electrónico -->
+            <TextField fx:id="emailUsuarioField" promptText="Correo electrónico" style="-fx-font-size: 16px;" />
+            <Label layoutX="30.0" layoutY="125.0" text="Contraseña : ">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+
+            <!-- Campo para la contraseña -->
+            <PasswordField fx:id="passwordUsuarioField" promptText="Contraseña" style="-fx-font-size: 16px;" />
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="80.0" spacing="30.0" style="-fx-background-color: #002b51; -fx-border-color: #FFFFFF; -fx-border-width: 2;" BorderPane.alignment="CENTER">
+            <children>
+
+                <!-- Botón para guardar los cambios -->
+                <Button fx:id="guardarButton" style="-fx-background-color: #27AE60; -fx-text-fill: white;" text="Guardar Cambios" />
+
+                <!-- Botón para cerrar la ventana -->
+                <Button fx:id="cerrarButton" style="-fx-background-color: #E74C3C; -fx-text-fill: white;" text="Cerrar" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #cefcf5; -fx-border-color: #6b96ae; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.recedamjavafx.controllers.DetalleRecetaController">
+    <top>
+        <Label fx:id="nombreRecetaLabel" text="Nombre de la Receta" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #f5f5f5; -fx-border-radius: 10px;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="imagenReceta" fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </VBox.margin></ImageView>
+                <TextArea fx:id="instruccionesReceta" editable="false" style="-fx-font-size: 14px; -fx-background-color: #fff; -fx-border-radius: 10px; -fx-border-color: #ddd; -fx-padding: 10px;" wrapText="true" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Cambié el fx:id de bntFavoritos a btnFavoritos -->
+                <Button fx:id="btnFavoritos" mnemonicParsing="false" style="-fx-background-color: #018400; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 30px;" text="Agregar a Favoritos" />
+                <Button fx:id="btnCerrar" mnemonicParsing="false" style="-fx-background-color: #840000; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 30px;" text="Cerrar" />
+            </children>
+        </HBox>
+    </bottom>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+</BorderPane>

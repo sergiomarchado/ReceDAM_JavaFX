@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #2C3E50; -fx-padding: 40px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.recedamjavafx.controllers.LoginController">
+
+    <!-- CONTENEDOR PRINCIPAL  -->
+    <VBox alignment="CENTER" prefHeight="400" prefWidth="500" spacing="15.0" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="20">
+
+        <!-- Mensaje de bienvenida -->
+        <Label style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;" text="¡Bienvenid@ a Rece-DAM!" />
+
+        <!-- Título de Iniciar Sesión -->
+        <Label style="-fx-font-size: 22px; -fx-text-fill: white; -fx-font-weight: bold;" text="Iniciar Sesión" />
+
+        <!-- VBOX con TexField de Email y PasswordField de contraseña -->
+        <VBox alignment="CENTER" spacing="15.0">
+            <Label style="-fx-font-size: 14; -fx-text-fill: white; -fx-font-weight: bold;" text="Correo Electrónico :" />
+            <TextField fx:id="emailLoginField" maxWidth="250" promptText="Email" style="-fx-background-radius: 10; -fx-padding: 10;" />
+            <Label layoutX="195.0" layoutY="10.0" style="-fx-font-size: 14; -fx-text-fill: white; -fx-font-weight: bold;" text="Contraseña :" />
+            <PasswordField fx:id="passwordLoginField" maxWidth="250" promptText="Contraseña" style="-fx-background-radius: 10; -fx-padding: 10;" />
+        </VBox>
+
+        <!-- Botón Iniciar Sesión -->
+        <Button fx:id="loginButton" maxWidth="150" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-padding: 10;" text="Iniciar Sesión" />
+
+        <!-- Label Informativo oculto -->
+        <Label fx:id="errorLabel" text="" textFill="red">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+
+        <!-- Botón para Registrarse -->
+        <Button fx:id="registerButton" maxWidth="150" style="-fx-background-color: #27AE60; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-padding: 10;" text="Registrarse" />
+
+        <!-- VBox con Campos de Registro (ocultos al principio) -->
+        <VBox fx:id="registerFields" alignment="CENTER" spacing="10" visible="false">
+            <Label style="-fx-font-size: 14; -fx-text-fill: white; -fx-font-weight: bold;" text="Correo Electrónico de Registro :" />
+            <!-- Campo para Email -->
+            <TextField fx:id="emailRegisterField" maxWidth="250" promptText="Introduce email de registro" style="-fx-background-radius: 10; -fx-padding: 10;" />
+            <Label layoutX="156.0" layoutY="10.0" style="-fx-font-size: 14; -fx-text-fill: white; -fx-font-weight: bold;" text="Establecer contraseña :" />
+
+            <PasswordField fx:id="passwordRegisterField" maxWidth="250" promptText="Establezca su contraseña" style="-fx-background-radius: 10; -fx-padding: 10;" />
+            <Label layoutX="185.0" layoutY="87.0" style="-fx-font-size: 14; -fx-text-fill: white; -fx-font-weight: bold;" text="Confirmar contraseña :" />
+
+            <PasswordField fx:id="confirmPasswordField" maxWidth="250" promptText="Repita la contraseña" style="-fx-background-radius: 10; -fx-padding: 10;" />
+            <Label layoutX="185.0" layoutY="164.0" style="-fx-font-size: 14; -fx-text-fill: white; -fx-font-weight: bold;" text="Nombre y Apellidos" />
+
+            <TextField fx:id="nameRegisterField" maxWidth="250" promptText="Nombre y Apellidos" style="-fx-background-radius: 10; -fx-padding: 10;" />
+        </VBox>
+
+        <!-- Botón de registrarse (visible solo cuando los campos de registro estén visibles) -->
+        <Button fx:id="registerSubmitButton" maxWidth="150" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-padding: 10;" text="Registrar" visible="false" />
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #6b96ae;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.recedamjavafx.controllers.MainController">
+
+    <!-- Menú lateral (Asignado en la parte izquierda del BorderPane) -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #2C3E50; -fx-padding: 15px;">
+            <Label style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" text="Menú">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </Label>
+            <Button fx:id="btnMenuInicio" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Inicio" />
+            <Button fx:id="btnFavoritos" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Recetas Favoritas" />
+            <Button fx:id="btnMenuMiPerfil" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Mi Perfil" />
+            <Button fx:id="btnMenuCerrarSesion" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: #911703; -fx-text-fill: white;" text="Cerrar Sesión" />
+            <Button fx:id="btnMenuMisRecetas" style="-fx-background-color: #f1bc06; -fx-text-fill: black;" text="Mis Recetas" />
+        </VBox>
+    </left>
+
+    <!-- Contenido principal asignado al centro -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 15px; -fx-background-color: #2C3E50;">
+                <children>
+                    <TextField fx:id="campoBuscarReceta" promptText="Buscar receta..." style="-fx-background-radius: 10; -fx-padding: 10;" />
+                    <Button fx:id="btnBuscarLupa" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="🔍" />
+                    <Button fx:id="btnAniadeTuReceta" style="-fx-background-color: #f1bc06; -fx-text-fill: black;" text="➕ Añade Tu Receta">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="btnAniadirAFavoritas" style="-fx-background-color: #008245; -fx-text-fill: white;" text="➕ Añadir a Favoritas">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </Button>
+                </children>
+            </HBox>
+            <Label fx:id="listaRecetasLabel" alignment="CENTER" text="Lista de Recetas">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <!-- ListView para Favoritos -->
+            <ListView fx:id="listViewFavoritos" style="-fx-background-radius: 10; -fx-padding: 10;">
+                <VBox.margin>
+                    <Insets left="20.0" right="20.0" />
+                </VBox.margin></ListView>
+
+            <!-- Botón para eliminar la receta seleccionada, inicialmente oculto -->
+            <Button fx:id="btnEliminarFavorito" style="-fx-background-color: #911703; -fx-text-fill: white;" text="Eliminar Favorito" visible="false" />
+            <Label fx:id="misRecetasLabel" alignment="CENTER" layoutX="108.0" layoutY="10.0" text="Mis Recetas">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <!-- ListView para Mis Recetas -->
+            <ListView fx:id="listViewMisRecetas" style="-fx-background-radius: 10; -fx-padding: 10;" visible="false">
+                <VBox.margin>
+                    <Insets left="20.0" right="20.0" />
+                </VBox.margin></ListView>
+            <Button fx:id="btnEliminarReceta" layoutX="123.0" layoutY="420.0" style="-fx-background-color: #911703; -fx-text-fill: white;" text="Eliminar Mi Receta" visible="false">
+                <VBox.margin>
+                    <Insets bottom="20" /> <!-- Margen inferior -->
+                </VBox.margin>
+            </Button>
+        </VBox>
+    </center>
+
+</BorderPane>
